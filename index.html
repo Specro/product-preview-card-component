@@ -12,19 +12,33 @@
   
   <title>Frontend Mentor | Product preview card component</title>
 </head>
-<body class="flex flex-col h-full">
+<body class="flex flex-col h-full bg-cream">
   <main class="container mx-auto flex flex-grow items-center justify-center">
-  Perfume
-
-  Gabrielle Essence Eau De Parfum
-
-  A floral, solar and voluptuous interpretation composed by Olivier Polge, 
-  Perfumer-Creator for the House of CHANEL.
-
-  $149.99
-  $169.99
-
-  Add to Cart
+    <div class="max-w-card bg-white rounded-xl mx-4 my-6 md:flex">
+      <img src="./images/image-product-mobile.jpg" alt="perfume" class="rounded-t-xl object-cover mb-6 md:hidden">
+      <div class="w-1/2 relative hidden md:block">
+        <img src="./images/image-product-desktop.jpg" alt="perfume" class="object-cover h-full w-full absolute rounded-l-xl">
+      </div>
+      <div class="px-6 pb-6 md:px-8 md:pt-8 md:pb-8 md:w-1/2">
+        <p class="uppercase text-dark-grayish-blue font-medium text-xs mb-4 tracking-widest">Perfume</p>
+        <h1 class="font-serif text-3xl font-extrabold mb-5 text-very-dark-blue leading-none">Gabrielle Essence Eau De Parfum</h1>
+        <p class="text-dark-grayish-blue text-sm mb-8">
+          A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANEL.
+        </p>
+        <div class="flex gap-4 items-center mb-5">
+          <span class="font-serif text-dark-cyan font-extrabold text-3xl">
+            $149.99
+          </span>
+          <span class="text-dark-grayish-blue line-through text-sm font-medium">
+            $169.99
+          </span>
+        </div>
+        <button class="text-center w-full bg-dark-cyan text-white rounded-lg py-3 font-bold text-sm flex items-center justify-center gap-3 hover:bg-dark-teal">
+          <img src="./images/icon-cart.svg" alt="cart" class="">
+          Add to Cart
+        </button>
+      </div>
+    </div>
   </main>
   <footer class="text-center">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
